@@ -101,7 +101,7 @@ class Scatter extends Component {
 					scale: SCALES[4],
 					orient: 'left',
 					ticks: ticks.y,
-					selected: 4,
+					selected: 5,
 				}
 			}
 		}
