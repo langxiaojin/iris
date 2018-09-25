@@ -1,0 +1,9 @@
+[
+  {
+    "sepalLength": "4.9",
+    "sepalWidth": "3",
+    "petalLength": "1.4",
+    "petalWidth": "0.2",
+    "target": "setosa"
+  }
+]
