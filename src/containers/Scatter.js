@@ -20,11 +20,11 @@ const ticks = {
 }
 const axis = {
 	x: {
-		width: 600,
+		width: 400,
 		label: 'Sepal Length'
 	},
 	y: {
-		height: 600,
+		height: 400,
 		label: 'Sepal Width'
 	}
 }
