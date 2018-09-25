@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import irisMetaData from '../data/iris.json';
-import List from "../components/test/List";
+import irisMetaData from '../../data/iris.json';
+import List from "../../components/test/List";
 import d3 from 'd3';
 
 class VisibleList extends Component {
