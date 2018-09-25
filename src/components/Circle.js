@@ -78,52 +78,7 @@ class Circle extends Component{
 	}
 
 	componentDidUpdate() {
-		let irisMetaData = this.props.irisMetaData;
-		let axis = this.props.axis;
-		let svg = d3.select('#' + this.props.svg);
-		let xScale = this.props.xScale;
-		let yScale = this.props.yScale;
-		var left = this.props.translate.left;
-		var top = this.props.translate.top;
-
-		svg.selectAll("circle")
-			.attr("cx", function(d){
-				let cx = left + xScale(d.sepalLength);
-				switch (parseInt(axis.x.selected)) {
-					case 0:
-						cx = left + xScale(d.sepalLength);
-						break;
-					case 1:
-						cx = left + xScale(d.sepalWidth);
-						break;
-					case 2:
-						cx = left + xScale(d.petalLength);
-						break;
-					case 3:
-						cx = left + xScale(d.petalWidth);
-						break;
-				}
-				return cx;
-			})
-			.attr("cy", function(d){
-				let cy = top + yScale(d.sepalWidth);
-				switch (parseInt(axis.y.selected)) {
-					case 4:
-						cy = top + yScale(d.sepalLength);
-						break;
-					case 5:
-						cy = top + yScale(d.sepalWidth);
-						break;
-					case 6:
-						cy = top + yScale(d.petalLength);
-						break;
-					case 7:
-						cy = top + yScale(d.petalWidth);
-						break;
-				}
-				return cy;
-			})
-
+		this.componentDidMount();
 	}
 
 	render(){

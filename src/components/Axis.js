@@ -12,38 +12,34 @@ class Axis extends Component {
 	}
 
 	componentDidMount() {
-		let axis;
-		console.log(this.props.orient);
+		let xAxis;
+		let yAxis;
 		switch (this.props.orient) {
-			case 'top':
-				axis = d3.axisTop(this.props.scale).ticks(this.props.ticks, ",f");
-				break;
-			case 'right':
-				axis = d3.axisRight(this.props.scale).ticks(this.props.ticks, ",f");
+			case 'left':
+				d3.select('#leftAxis').remove();
+				yAxis = d3.axisLeft(this.props.scale).ticks(this.props.ticks, ",f");
 				break;
 			case 'bottom':
 				d3.select('#bottomAxis').remove();
-				axis = d3.axisBottom(this.props.scale).ticks(this.props.ticks, ",f");
-				break;
-			case 'left':
-				d3.select('#leftAxis').remove();
-				axis = d3.axisLeft(this.props.scale).ticks(this.props.ticks, ",f");
+				xAxis = d3.axisBottom(this.props.scale).ticks(this.props.ticks, ",f");
 				break;
 		}
 
 		let svg = d3.select('#' + this.props.svg);
 		switch (this.props.orient) {
 			case 'left':
+				console.log(this.props.orient);
 				svg.append('g')
 					.attr('id', 'leftAxis')
 					.attr('transform', 'translate(' + this.props.translate.left + ',' + this.props.translate.top + ')')
-					.call(axis);
+					.call(yAxis);
 				break;
 			case 'bottom':
+				console.log(this.props.orient);
 				svg.append('g')
 					.attr('id', 'bottomAxis')
 					.attr('transform', 'translate(' + this.props.translate.left + ',' + (this.props.translate.top + this.props.axis.y.height) + ')')
-					.call(axis);
+					.call(xAxis);
 				break;
 		}
 	}
