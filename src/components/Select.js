@@ -9,6 +9,7 @@ class Select extends Component {
 	changeSelected = (e) => {
 		const currentValue = e.target.value;
 		this.props.onAxisChange(currentValue, this.props.position);
+		window._paq.push(['trackEvent', 'Menu', 'Freedom']);
 	}
 
 	render(){
