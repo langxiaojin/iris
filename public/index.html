@@ -24,14 +24,14 @@
     <script type="text/javascript">
       var _paq = _paq || [];
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['setTrackerUrl', u+'piwik.php']);
-      _paq.push(['setSiteId', '4']);
       _paq.push(['setCustomVariable',1,"姓名","曹先进","visit"]);
       _paq.push(['setCustomVariable',2,"部门","信息管理部","visit"]);
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
       (function() {
         var u="//statistics-dev.cifi.com.cn/matomo/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '4']);
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
         g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
       })();
